@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BasicsWebApi/1.0.0": {
+        "dependencies": {
+          "MathLibrary": "1.0.0"
+        },
+        "runtime": {
+          "BasicsWebApi.dll": {}
+        }
+      },
+      "MathLibrary/1.0.0": {
+        "runtime": {
+          "MathLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BasicsWebApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MathLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

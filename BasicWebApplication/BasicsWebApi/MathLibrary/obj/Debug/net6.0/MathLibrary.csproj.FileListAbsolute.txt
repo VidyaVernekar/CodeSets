@@ -1,0 +1,12 @@
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\bin\Debug\net6.0\MathLibrary.deps.json
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\bin\Debug\net6.0\MathLibrary.dll
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\bin\Debug\net6.0\MathLibrary.pdb
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.csproj.AssemblyReference.cache
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.AssemblyInfoInputs.cache
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.AssemblyInfo.cs
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.csproj.CoreCompileInputs.cache
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.dll
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\refint\MathLibrary.dll
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\MathLibrary.pdb
+C:\Application\BasicWebApplication\BasicsWebApi\MathLibrary\obj\Debug\net6.0\ref\MathLibrary.dll

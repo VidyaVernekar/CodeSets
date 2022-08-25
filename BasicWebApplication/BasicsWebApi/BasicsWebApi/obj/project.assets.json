@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "MathLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MathLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MathLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MathLibrary/1.0.0": {
+      "type": "project",
+      "path": "../MathLibrary/MathLibrary.csproj",
+      "msbuildProject": "../MathLibrary/MathLibrary.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "MathLibrary >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\cogdotnet1691\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Application\\BasicWebApplication\\BasicsWebApi\\BasicsWebApi\\BasicsWebApi.csproj",
+      "projectName": "BasicsWebApi",
+      "projectPath": "C:\\Application\\BasicWebApplication\\BasicsWebApi\\BasicsWebApi\\BasicsWebApi.csproj",
+      "packagesPath": "C:\\Users\\cogdotnet1691\\.nuget\\packages\\",
+      "outputPath": "C:\\Application\\BasicWebApplication\\BasicsWebApi\\BasicsWebApi\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\cogdotnet1691\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Application\\BasicWebApplication\\BasicsWebApi\\MathLibrary\\MathLibrary.csproj": {
+              "projectPath": "C:\\Application\\BasicWebApplication\\BasicsWebApi\\MathLibrary\\MathLibrary.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
