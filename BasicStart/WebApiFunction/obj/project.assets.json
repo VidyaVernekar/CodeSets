@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Application\\BasicStart\\WebApiFunction\\WebApiFunction.csproj",
+      "projectUniqueName": "C:\\Application\\CodeSets\\BasicStart\\WebApiFunction\\WebApiFunction.csproj",
       "projectName": "WebApiFunction",
-      "projectPath": "C:\\Application\\BasicStart\\WebApiFunction\\WebApiFunction.csproj",
+      "projectPath": "C:\\Application\\CodeSets\\BasicStart\\WebApiFunction\\WebApiFunction.csproj",
       "packagesPath": "C:\\Users\\cogdotnet1691\\.nuget\\packages\\",
-      "outputPath": "C:\\Application\\BasicStart\\WebApiFunction\\obj\\",
+      "outputPath": "C:\\Application\\CodeSets\\BasicStart\\WebApiFunction\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
