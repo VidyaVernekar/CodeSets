@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tfLBONczMeW3yh073NoIZ5oJ9LkrByNft6Wk62x0AwQ=",
+  "Source": "WebApiFunction",
+  "BasePath": "_content/WebApiFunction",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
