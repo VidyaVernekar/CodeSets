@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Application\\CodeSets\\BasicWebApplication\\BasicsWebApi\\MathLibrary\\MathLibrary.csproj",
+      "projectUniqueName": "C:\\Application\\CodeSets\\BasicStart\\BasicsWebApi\\MathLibrary\\MathLibrary.csproj",
       "projectName": "MathLibrary",
-      "projectPath": "C:\\Application\\CodeSets\\BasicWebApplication\\BasicsWebApi\\MathLibrary\\MathLibrary.csproj",
+      "projectPath": "C:\\Application\\CodeSets\\BasicStart\\BasicsWebApi\\MathLibrary\\MathLibrary.csproj",
       "packagesPath": "C:\\Users\\cogdotnet1691\\.nuget\\packages\\",
-      "outputPath": "C:\\Application\\CodeSets\\BasicWebApplication\\BasicsWebApi\\MathLibrary\\obj\\",
+      "outputPath": "C:\\Application\\CodeSets\\BasicStart\\BasicsWebApi\\MathLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace WebAPIStudentDepartment.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Produces("application/xml")]
     public class StudentDataController : ControllerBase
     {
         public static List<Students> stud = new List<Students>();
@@ -109,17 +111,15 @@ namespace WebAPIStudentDepartment.Controllers
 
         public IActionResult Delete(int ID, string Name)
         {
+            bool IsExist = stud.Count > 0 && stud.Exists(x => x.studentID.Equals(ID));
+            if (!IsExist)
+            {
+                return BadRequest("Not Exists");
+            }
             try
             {
-                if (stud.Exists(x => x.studentID == ID && x.studentName.Contains(Name)))
-                {
-                    stud.Remove(stud.Find(emp => emp.studentID.Equals(ID)));
-                    return Ok("Removed");
-                }
-                else
-                {
-                    return Ok("The List not present Employee}");
-                }
+                stud.Remove(stud.Find(emp => emp.studentID.Equals(ID)));
+                return Ok("Removed");
             }
             catch (Exception ex)
             {
@@ -127,17 +127,16 @@ namespace WebAPIStudentDepartment.Controllers
             }
         }
 
-
         [HttpGet]
-        public IEnumerable<Students> Get()
+        public IActionResult Get()
         {
-            return stud;
+            return Ok(stud);
         }
         [HttpGet]
         [Route("Getdepartment")]
-        public IEnumerable<Department> Getdepartment()
+        public IActionResult Getdepartment()
         {
-            return dept;
+            return Ok(dept);
         }
     }
 }
