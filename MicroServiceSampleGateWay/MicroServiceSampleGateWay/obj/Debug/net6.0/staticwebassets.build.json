@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dETlFeXY4c058Ebm0TGp3GiBikAf6fj05r74Wk6ntFY=",
+  "Source": "MicroServiceSampleGateWay",
+  "BasePath": "_content/MicroServiceSampleGateWay",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

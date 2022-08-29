@@ -1,0 +1,15 @@
+Create Models folder
+1. PM> scaffold-Dbcontext "Server=(localdb)\mssqllocaldb; Database=EntityFrameworkLearning;Trusted_Connection=True;" Microsoft.EntityframeworkCore.Sqlserver -OutputDir Models
+
+
+2.Change in program.cs 
+using nameapsce of context
+using entityframework
+
+service.builder.AddDBcontext<ContextName>(option=>option.UseServer(builder.configraton.GetContection("dbconn")));
+
+3.
+Add connectiontstring in APPsetting.json
+
+
+4.Add ControlledEndpoints
