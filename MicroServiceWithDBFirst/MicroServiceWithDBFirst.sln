@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceWithDBFirst", "MicroServiceWithDBFirst\MicroServiceWithDBFirst.csproj", "{88D85A4B-00D4-40C1-9103-2B7C3CD4435C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIWithDBFirst", "WebAPIWithDBFirst\WebAPIWithDBFirst.csproj", "{B3BCFBB9-FFB4-4808-A960-917760D8131D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88D85A4B-00D4-40C1-9103-2B7C3CD4435C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D85A4B-00D4-40C1-9103-2B7C3CD4435C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D85A4B-00D4-40C1-9103-2B7C3CD4435C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D85A4B-00D4-40C1-9103-2B7C3CD4435C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BCFBB9-FFB4-4808-A960-917760D8131D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BCFBB9-FFB4-4808-A960-917760D8131D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BCFBB9-FFB4-4808-A960-917760D8131D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BCFBB9-FFB4-4808-A960-917760D8131D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1EF2DC0-349F-4BEE-9FEC-B4370068B047}
+	EndGlobalSection
+EndGlobal

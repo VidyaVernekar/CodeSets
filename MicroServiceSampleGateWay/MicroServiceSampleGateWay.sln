@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceSampleGateWay",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeService", "EmployeeService\EmployeeService.csproj", "{65E1EE1D-AAFE-4335-8EF8-D16EF80FEC14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpolyeeDBFirst", "EmpolyeeDBFirst\EmpolyeeDBFirst.csproj", "{5DFF339F-F774-436F-8E2C-302595FF4A92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpolyeeDBFirst", "EmpolyeeDBFirst\EmpolyeeDBFirst.csproj", "{5DFF339F-F774-436F-8E2C-302595FF4A92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "AuthServer\AuthServer.csproj", "{0D556CAD-E4D7-4041-9697-7D207EBE0DFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5DFF339F-F774-436F-8E2C-302595FF4A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DFF339F-F774-436F-8E2C-302595FF4A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DFF339F-F774-436F-8E2C-302595FF4A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D556CAD-E4D7-4041-9697-7D207EBE0DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D556CAD-E4D7-4041-9697-7D207EBE0DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D556CAD-E4D7-4041-9697-7D207EBE0DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D556CAD-E4D7-4041-9697-7D207EBE0DFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

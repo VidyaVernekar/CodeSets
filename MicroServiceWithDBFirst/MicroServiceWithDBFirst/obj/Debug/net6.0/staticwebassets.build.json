@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "A+qaHp591MFMHLsoJxs7Bfyj0EjTEuRBJaO0B21qWvY=",
+  "Source": "MicroServiceWithDBFirst",
+  "BasePath": "_content/MicroServiceWithDBFirst",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

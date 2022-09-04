@@ -25,3 +25,11 @@ C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\obj\Debug\net6
 C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\obj\Debug\net6.0\EmployeeService.pdb
 C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\obj\Debug\net6.0\EmployeeService.genruntimeconfig.cache
 C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\obj\Debug\net6.0\ref\EmployeeService.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Application\CodeSets\MicroServiceSampleGateWay\EmployeeService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
