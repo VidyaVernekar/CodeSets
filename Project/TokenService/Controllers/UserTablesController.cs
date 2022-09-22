@@ -29,9 +29,9 @@ namespace TokenService.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(UserTable _userData)
         {
-            if (_userData != null && _userData.EmailId != null && _userData.Password != null)
+            if (_userData != null && _userData.UserName != null && _userData.Password != null)
             {
-                var user = await GetUser(_userData.EmailId, _userData.Password);
+                var user = await GetUser(_userData.UserName, _userData.Password);
 
                 if (user != null)
                 {
@@ -41,6 +41,7 @@ namespace TokenService.Controllers
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                         new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                         new Claim("UserId", user.UserId.ToString()),
+                        new Claim("Role", user.RoleId.ToString()),
                         new Claim("DisplayName", user.FirstName),
                         new Claim("UserName", user.UserName),
                         new Claim("Email", user.EmailId)
@@ -68,9 +69,9 @@ namespace TokenService.Controllers
             }
         }
 
-        private async Task<UserTable> GetUser(string email, string password)
+        private async Task<UserTable> GetUser(string username, string password)
         {
-            return await _context.UserTables.FirstOrDefaultAsync(u => u.EmailId == email && u.Password == password);
+            return await _context.UserTables.FirstOrDefaultAsync(u =>u.UserName == username && u.Password == password);
         }
     }
 }

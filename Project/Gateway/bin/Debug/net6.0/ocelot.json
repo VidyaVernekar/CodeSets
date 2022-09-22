@@ -31,7 +31,9 @@
       "UpstreamPathTemplate": "/Book/CreateOrSearchBook",
       "UpstreamHttpMethod": [ "Get" ]
     }
+    
   ],
+
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:44304"
   }

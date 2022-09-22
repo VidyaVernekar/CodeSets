@@ -18,7 +18,7 @@ namespace CreateAndSearchBook.Models
         public int? UserId { get; set; }
         public DateTime? PublishedDate { get; set; }
         public string? Content { get; set; }
-        public bool? Active { get; set; }
+        public string? Active { get; set; }
         public DateTime? CreatedDate { get; set; }
         public int? Createdby { get; set; }
         public DateTime? ModifiedDate { get; set; }

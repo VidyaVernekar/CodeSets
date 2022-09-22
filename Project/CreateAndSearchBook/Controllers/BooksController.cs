@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CreateAndSearchBook.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Reflection.Metadata;
+using System.Security.Policy;
 
 namespace CreateAndSearchBook.Controllers
 {
@@ -29,9 +31,50 @@ namespace CreateAndSearchBook.Controllers
           {
               return NotFound();
           }
-            return await _context.Books.ToListAsync();
-        }
+            var query = await (from n in _context.Books
+                               join c in _context.UserTables on n.UserId equals c.UserId
 
+                               select new
+                               {
+                                   n.BookId,
+                                   n.BookName,
+                                   c.UserName,
+                                   n.CategoryId,
+                                   n.Price,
+                                   n.Publisher,
+                                   n.UserId,
+                                   n.PublishedDate,
+                                   n.Content,
+                                   n.Active
+                               }).ToListAsync();
+            return Ok(query);
+        }
+        // GET: api/Books
+        [HttpGet]
+        [Route("GetBookswithAutor")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBookswithAutor()
+        {
+            if (_context.Books == null)
+            {
+                return NotFound();
+            }
+            var query = await (from n in _context.Books
+                               join c in _context.UserTables on n.UserId equals c.UserId where n.Active == "1"
+                               select new
+                               {
+                                   n.BookId,
+                                   n.BookName,
+                                   c.UserName,
+                                   n.CategoryId,
+                                   n.Price,
+                                   n.Publisher,
+                                   n.UserId,
+                                   n.PublishedDate,
+                                   n.Content,
+                                   n.Active
+                               }).ToListAsync();
+            return Ok(query);
+        }
         // GET: api/Books/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Book>> GetBook(int id)
@@ -40,14 +83,32 @@ namespace CreateAndSearchBook.Controllers
           {
               return NotFound();
           }
-            var book = await _context.Books.FindAsync(id);
+            var query = await (from n in _context.Books
+                               join c in _context.UserTables on n.UserId equals c.UserId
+
+                               select new
+                               {
+                                   n.BookId,
+                                   n.BookName,
+                                   c.UserName,
+                                   n.CategoryId,
+                                   n.Price,
+                                   n.Publisher,
+                                   n.UserId,
+                                   n.PublishedDate,
+                                   n.Content,
+                                   n.Active,
+                                   n.CreatedDate,
+                                   n.Createdby
+                               }).ToListAsync();
+            var book = query.Where(x => x.BookId == id);
 
             if (book == null)
             {
                 return NotFound();
             }
 
-            return book;
+            return Ok(book);
         }
         // GET: api/Books/5
         [HttpGet]
@@ -72,6 +133,8 @@ namespace CreateAndSearchBook.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBook(int id, Book book)
         {
+            book.Modifiedby = book.UserId;
+            book.ModifiedDate = DateTime.Now;
             if (id != book.BookId)
             {
                 return BadRequest();
@@ -100,7 +163,7 @@ namespace CreateAndSearchBook.Controllers
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Book>> PostBook(Book book)
+        public async Task<IActionResult> PostBook([FromBody] Book book)
         {
           if (_context.Books == null)
           {
@@ -136,5 +199,35 @@ namespace CreateAndSearchBook.Controllers
         {
             return (_context.Books?.Any(e => e.BookId == id)).GetValueOrDefault();
         }
+        [HttpGet]
+        [Route("GetBooksAutho")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBooksAutho(int ID)
+        {
+            if (_context.Purchases == null)
+            {
+                return NotFound();
+            }
+            var query = await (from n in _context.Books
+                               join c in _context.UserTables on n.UserId equals c.UserId
+                               join d in _context.Categories on n.CategoryId equals d.CategoryId
+                               where c.UserId == ID orderby n.BookId descending
+                               select new
+                               {
+                                   n.BookId,
+                                   n.BookName,
+                                   n.CategoryId,
+                                   n.Price,
+                                   n.Publisher,
+                                   n.PublishedDate,
+                                   n.Content,
+                                   n.Active,
+                                   c.UserName,
+                                   d.CategoryName,
+                                   n.CreatedDate,
+                                   n.ModifiedDate
+                               }).ToListAsync();
+            return Ok(query);
+        }
+
     }
 }

@@ -50,77 +50,30 @@ namespace WebAPIProjectApplication.Controllers
 
             return userTable;
         }
-
-        //// PUT: api/UserLogin/5
-        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutUserTable(int id, UserTable userTable)
-        //{
-        //    if (id != userTable.UserId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    _context.Entry(userTable).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!UserTableExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return NoContent();
-        //}
-
-        // POST: api/UserLogin
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        [Route("Register")]
-        public async Task<ActionResult<UserTable>> PostUserTable(UserTable userTable)
+        public async Task<IActionResult> Post([FromBody] UserTable userTable)
         {
           if (_context.UserTables == null)
           {
-              return Problem("Entity set 'ProjectDBContext.UserTables'  is null.");
+              return Problem("Entity set 'ProjectDBContext.UserTables' is null.");
           }
+          else if (UserEmailExists(userTable.EmailId,userTable.UserName))
+            {
+                return Problem("Already Exists");
+            }
             _context.UserTables.Add(userTable);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetUserTable", new { id = userTable.UserId }, userTable);
         }
 
-        ////// DELETE: api/UserLogin/5
-        ////[HttpDelete("{id}")]
-        ////public async Task<IActionResult> DeleteUserTable(int id)
-        ////{
-        ////    if (_context.UserTables == null)
-        ////    {
-        ////        return NotFound();
-        ////    }
-        ////    var userTable = await _context.UserTables.FindAsync(id);
-        ////    if (userTable == null)
-        ////    {
-        ////        return NotFound();
-        ////    }
-
-        ////    _context.UserTables.Remove(userTable);
-        ////    await _context.SaveChangesAsync();
-
-        ////    return NoContent();
-        ////}
-
         private bool UserTableExists(int id)
         {
             return (_context.UserTables?.Any(e => e.UserId == id)).GetValueOrDefault();
+        }
+        private bool UserEmailExists(string email,string username)
+        {
+            return (_context.UserTables?.Any(e => e.EmailId == email || e.UserName == username)).GetValueOrDefault();
         }
     }
 }

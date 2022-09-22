@@ -12,7 +12,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOcelot().AddPolly();
 builder.Configuration.AddJsonFile("ocelot.json");
-
+builder.Services.AddCors((setup) =>
+{
+    setup.AddPolicy("register", (options) =>
+    {
+        options.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

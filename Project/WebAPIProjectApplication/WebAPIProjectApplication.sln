@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateAndSearchBook", "..\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "..\Gateway\Gateway.csproj", "{4F0B88AC-15DC-4B2D-9787-C5647B7B65CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenService", "..\TokenService\TokenService.csproj", "{8F6795ED-FA34-4F07-A5A4-08ED354C5A73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenService", "..\TokenService\TokenService.csproj", "{8F6795ED-FA34-4F07-A5A4-08ED354C5A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAzureFunction", "..\PaymentAzureFunction\PaymentAzureFunction.csproj", "{6D40FE6A-58E9-4056-B8E2-BDB14AD8FECD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8F6795ED-FA34-4F07-A5A4-08ED354C5A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F6795ED-FA34-4F07-A5A4-08ED354C5A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F6795ED-FA34-4F07-A5A4-08ED354C5A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D40FE6A-58E9-4056-B8E2-BDB14AD8FECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D40FE6A-58E9-4056-B8E2-BDB14AD8FECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D40FE6A-58E9-4056-B8E2-BDB14AD8FECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D40FE6A-58E9-4056-B8E2-BDB14AD8FECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

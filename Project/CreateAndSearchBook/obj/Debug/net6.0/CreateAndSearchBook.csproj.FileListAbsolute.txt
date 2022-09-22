@@ -269,6 +269,7 @@ C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\CreateAndSe
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Humanizer.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\MessagePack.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\MessagePack.Annotations.dll
+C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.Build.Locator.dll
@@ -296,6 +297,7 @@ C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.E
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -520,5 +522,3 @@ C:\Application\CodeSets\Project\CreateAndSearchBook\obj\Debug\net6.0\refint\Crea
 C:\Application\CodeSets\Project\CreateAndSearchBook\obj\Debug\net6.0\CreateAndSearchBook.pdb
 C:\Application\CodeSets\Project\CreateAndSearchBook\obj\Debug\net6.0\CreateAndSearchBook.genruntimeconfig.cache
 C:\Application\CodeSets\Project\CreateAndSearchBook\obj\Debug\net6.0\ref\CreateAndSearchBook.dll
-C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Application\CodeSets\Project\CreateAndSearchBook\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
