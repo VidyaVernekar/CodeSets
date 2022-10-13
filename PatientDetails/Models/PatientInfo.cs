@@ -13,10 +13,10 @@ namespace PatientDetails.Models
         public int Id { get; set; }
         public DateTime? Dob { get; set; }
         public string? EmailId { get; set; }
-        public int? Phone { get; set; }
+        public string? Phone { get; set; }
         public int? StatusId { get; set; }
         public string? Address { get; set; }
-
+        public string? PatientName { get; set; }
         public virtual PatientStatus? Status { get; set; }
         public virtual ICollection<Prescription> Prescriptions { get; set; }
     }

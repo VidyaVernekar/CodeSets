@@ -8,6 +8,7 @@ C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\PatientDetails.pdb
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Humanizer.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\MessagePack.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\MessagePack.Annotations.dll
+C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.Build.dll
@@ -36,6 +37,7 @@ C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.EntityFramewor
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -77,6 +79,8 @@ C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\System.Runtime.Caching.d
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\System.Security.Permissions.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Unity.Abstractions.dll
+C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\Unity.Container.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Application\CodeSets\PatientDetails\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll

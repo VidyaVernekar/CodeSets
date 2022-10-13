@@ -12,7 +12,7 @@ namespace PatientDetails.Models
 
         public int DrugId { get; set; }
         public string? DrugName { get; set; }
-
+        public string? DrugIDformat { get; set; }
         public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }
