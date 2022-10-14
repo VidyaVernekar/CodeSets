@@ -7,7 +7,7 @@ namespace PatientDetails.Services
     public interface IPatientinfo
     {
         Task<ActionResult<IEnumerable<PatientInfo>>> GetPatientInfos();
-        PatientInfo GetPatientInfo(int id);
+        Task<PatientInfo> GetPatientInfo(int id);
         void PutPatientInfo(int id, PatientInfo patientInfo);
         void PostPatientInfo(PatientInfo patientInfo);
         bool PatientInfoExists(int id);

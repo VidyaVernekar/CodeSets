@@ -10,38 +10,44 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
 using PatientDetails.Models;
 using PatientDetails.Services;
+using MediatR;
+using PatientDetails.Queries;
+using PatientDetails.Handlers;
+using PatientDetails.Commands;
 
 namespace PatientDetails.Controllers
 {
     [Route("api/patientinfo")]
     [ApiController]
-    [Authorize]
     public class PatientinfoController : ControllerBase
     {
-        private readonly IPatientinfo _context;
+        private readonly IMediator _mediatR;
 
-        public PatientinfoController(IPatientinfo context)
+        public PatientinfoController(IMediator mediatR)
         {
-            _context = context;
+            _mediatR = mediatR;
         }
      
         // GET: api/PatientInfoes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PatientInfo>>> GetPatientInfos()
         {
-            return await _context.GetPatientInfos();
+            return await _mediatR.Send(new GetPatientInfoQueries());
         }
+        //Alternate way;
+      //  public async Task<ActionResult<IEnumerable<PatientInfo>>> GetPatientInfos() => await _mediatR.Send(new GetPatientInfoQueries());
 
         // GET: api/PatientInfoes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PatientInfo>> GetPatientInfo(int id)
         {
-            var patientInfo = _context.GetPatientInfo(id);
+            var patientInfo = await _mediatR.Send(new GetPatientInfoQueriesByID(id));
 
             if (patientInfo == null)
             {
@@ -62,11 +68,11 @@ namespace PatientDetails.Controllers
             }
             try
             {
-               _context.PutPatientInfo(id,patientInfo);
+                await _mediatR.Send(new UpdatePatientInfoCommand(id, patientInfo));
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PatientInfoExists(id))
+                if (!await PatientInfoExists(id))
                 {
                     return NotFound();
                 }
@@ -84,7 +90,7 @@ namespace PatientDetails.Controllers
         [HttpPost]
         public async Task<ActionResult<PatientInfo>> PostPatientInfo(PatientInfo patientInfo)
         {
-            _context.PostPatientInfo(patientInfo);
+           await _mediatR.Send(new CreatePatientInfoCommand(patientInfo));
 
             return CreatedAtAction("GetPatientInfo", new { id = patientInfo.Id }, patientInfo);
         }
@@ -93,40 +99,32 @@ namespace PatientDetails.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePatientInfo(int id)
         {
-            var patientInfo = _context.GetPatientInfo(id);
+            var patientInfo = await _mediatR.Send(new GetPatientInfoQueriesByID(id));
             if (patientInfo == null)
             {
                 return NotFound();
             }
 
-            _context.DeletePatientInfo(patientInfo);
+            await _mediatR.Send(new DeletePatientInfoCommand(patientInfo));
 
             return Ok();
         }
 
-        private bool PatientInfoExists(int id)
+        private async Task<bool> PatientInfoExists(int id)
         {
-            return _context.PatientInfoExists(id);
+            return await _mediatR.Send(new IsExistsPatientInfoCommand(id));
         }
 
         [Route("endpoint")]
         [HttpPost]
         public async Task<IActionResult> Save(List<PatientDetailsODSheet> patientsList)
         {
-            List<PatientDetailsODSheet> formatNotCorrectList = await _context.PatientSpreedShetSave(patientsList);
+            List<PatientDetailsODSheet> formatNotCorrectList = await _mediatR.Send(new CreatePatientInfoBySpreadSheetCommand(patientsList));
            
             if (formatNotCorrectList.Count > 0 || formatNotCorrectList.Count == 0)
                 return Ok(formatNotCorrectList);
             else
                 return BadRequest();
-        }
-        private async Task<Drug> DrugExists(string drugname, string drugIdFormat)
-        {
-            return await _context.DrugExists(drugname, drugIdFormat);
-        }
-        private async Task<PatientInfo> PatientExists(string email, string name)
-        {
-            return await _context.PatientExists(email,name);
         }
         
     }

@@ -13,6 +13,10 @@ using System.Web.Http;
 using Microsoft.CodeAnalysis.Differencing;
 using OkResult = Microsoft.AspNetCore.Mvc.OkResult;
 using System.Net;
+using MediatR;
+using PatientDetails.Queries;
+using PatientDetails.Commands;
+
 
 namespace PatientInfoTest
 {
@@ -20,25 +24,26 @@ namespace PatientInfoTest
     [TestFixture]
     public class Tests
     {
+        private Mock<IMediator> mockMediatr;
+
         [Test]
         public void GetPatient()
         {
-            var mockRepository = new Mock<IPatientinfo>();
-            mockRepository.Setup(x => x.GetPatientInfo(42))
-                .Returns(new PatientInfo { Id = 42, PatientName="Demo Name",Phone="8787878787",Address="demo address",Dob=Convert.ToDateTime("09/09/1990"),EmailId="demo@gmail.com" });
+            mockMediatr = new Mock<IMediator>();
+            mockMediatr.Setup(x => x.Send(new GetPatientInfoQueriesByID(42),
+    It.IsAny<CancellationToken>())).Returns(Task.FromResult(new PatientInfo { Id = 42, PatientName = "Demo Name", Phone = "8787878787", Address = "demo address", Dob = Convert.ToDateTime("09/09/1990"), EmailId = "demo@gmail.com" }));
 
-            var controller = new PatientinfoController(mockRepository.Object);
+            var controller = new PatientinfoController(mockMediatr.Object);
             ActionResult<PatientInfo> result = controller.GetPatientInfo(42).Result;
             PatientInfo patientinfo = result.Value;
-           
-           Assert.IsNotNull(patientinfo);
-           Assert.AreEqual(42, patientinfo.Id);
+
+            Assert.IsNotNull(patientinfo);
+            Assert.AreEqual(42, patientinfo.Id);
         }
         [Test]
         public void GetReturnsNotFound()
         {
-            // Arrange
-            var mockRepository = new Mock<IPatientinfo>();
+            var mockRepository = new Mock<IMediator>();
             var controller = new PatientinfoController(mockRepository.Object);
 
             // Act
@@ -51,7 +56,7 @@ namespace PatientInfoTest
         public void DeleteReturnsNotFound()
         {
             // Arrange
-            var mockRepository = new Mock<IPatientinfo>();
+            var mockRepository = new Mock<IMediator>();
             var controller = new PatientinfoController(mockRepository.Object);
 
             // Act
@@ -65,18 +70,18 @@ namespace PatientInfoTest
         [Test]
         public void DeleteReturnsOk()
         {
-            var mockRepository = new Mock<IPatientinfo>();
-            mockRepository.Setup(x => x.GetPatientInfo(42))
-                .Returns(new PatientInfo { Id = 42, PatientName = "Demo Name", Phone = "8787878787", Address = "demo address", Dob = Convert.ToDateTime("09/09/1990"), EmailId = "demo@gmail.com" });
+            mockMediatr = new Mock<IMediator>();
+            mockMediatr.Setup(x => x.Send(new GetPatientInfoQueriesByID(42),
+     It.IsAny<CancellationToken>())).ReturnsAsync(new PatientInfo { Id = 42, PatientName = "Demo Name", Phone = "8787878787", Address = "demo address", Dob = Convert.ToDateTime("09/09/1990"), EmailId = "demo@gmail.com" });
 
-            var controller = new PatientinfoController(mockRepository.Object);
+            var controller = new PatientinfoController(mockMediatr.Object);
             IActionResult actionResult = controller.DeletePatientInfo(42).Result;
             Assert.IsInstanceOfType(actionResult, typeof(Microsoft.AspNetCore.Mvc.OkResult));
         }
         [Test]
         public void PostMethod()
         {
-            var mockRepository = new Mock<IPatientinfo>();
+            var mockRepository = new Mock<IMediator>();
             var controller = new PatientinfoController(mockRepository.Object);
 
             ActionResult<PatientInfo> actionResult = controller.PostPatientInfo(new PatientInfo { Id = 50, PatientName = "Demo Name", Phone = "8787878787", Address = "demo address", Dob = Convert.ToDateTime("09/09/1990"), EmailId = "demo@gmail.com" }).Result;
@@ -88,7 +93,7 @@ namespace PatientInfoTest
         [Test]
         public void PutPatient()
         {
-            var mockRepository = new Mock<IPatientinfo>();
+            var mockRepository = new Mock<IMediator>();
             var controller = new PatientinfoController(mockRepository.Object);
 
             IActionResult actionResult = controller.PutPatientInfo(55,new PatientInfo { Id = 55, PatientName = "Demo Name", Phone = "8787878787", Address = "demo address", Dob = Convert.ToDateTime("09/09/1990"), EmailId = "demo@gmail.com" }).Result;

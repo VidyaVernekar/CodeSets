@@ -23,14 +23,14 @@ namespace PatientDetails.Services
             return await db.Drugs.FirstOrDefaultAsync(u => u.DrugIDformat == drugIdFormat && u.DrugName == drugname);
         }
 
-        public PatientInfo GetPatientInfo(int id)
+        public async Task<PatientInfo> GetPatientInfo(int id)
         {
-            return db.PatientInfos.Find(id);
+            return await Task.FromResult(db.PatientInfos.Find(id));
         }
 
         public async Task<ActionResult<IEnumerable<PatientInfo>>> GetPatientInfos()
         {
-            return await db.PatientInfos.ToListAsync();
+            return await Task.FromResult(db.PatientInfos.ToList());
         }
 
         public async Task<PatientInfo> PatientExists(string email, string name)

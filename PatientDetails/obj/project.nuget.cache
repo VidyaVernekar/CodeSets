@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QKChRQT8elCu2HkIN2cQrpTWwF9bWRfz0dHsljX5BFNaOnE7Lz4rdhT/9mFF8YHT3kMM4cFMucwsGMuC5UZz0w==",
+  "dgSpecHash": "12v0iM56+zJd6xz9GAQjdY6O9TAraa1qZWQjvrfxZVhjHdnHBDVd/qCOxuJZY79tY7KYy+UXxsVqOyq2Ha0rOA==",
   "success": true,
   "projectFilePath": "C:\\Application\\CodeSets\\PatientDetails\\PatientDetails.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cogdotnet1691\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\cogdotnet1691\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\cogdotnet1691\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\cogdotnet1691\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\cogdotnet1691\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\cogdotnet1691\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\cogdotnet1691\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

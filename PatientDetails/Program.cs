@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using PatientDetails.Services;
 using System.Configuration;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
+builder.Services.AddMediatR(typeof(EntiryPoint).Assembly);
 builder.Services.AddCors((setup) =>
 {
     setup.AddPolicy("default", (options) =>
