@@ -11,7 +11,7 @@
     <WebStackScaffolding_DbContextTypeFullName>PatientDetails.Models.PatientDetailsContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\Application\CodeSets\PatientDetails\Properties\PublishProfiles\PatientDetails20221012154332 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Application\CodeSets\PatientDetails\Properties\PublishProfiles\PatientDetails20221015225242 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

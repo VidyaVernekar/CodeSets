@@ -7,4 +7,6 @@ namespace PatientDetails.Commands
 
     public record IsExistsPatientInfoCommand(int id) : IRequest<bool>;
 
+    public record IsExistsLoginCommand(string username, string password) : IRequest<Login>;
+
 }

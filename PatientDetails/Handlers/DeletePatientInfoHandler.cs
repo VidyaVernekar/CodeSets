@@ -7,8 +7,8 @@ namespace PatientDetails.Handlers
 {
     public class DeletePatientInfoHandler : IRequestHandler<DeletePatientInfoCommand>
     {
-        private IPatientinfo _patientinfo;
-        public DeletePatientInfoHandler(IPatientinfo patientinfo)
+        private IPatientinfoService _patientinfo;
+        public DeletePatientInfoHandler(IPatientinfoService patientinfo)
         {
             _patientinfo = patientinfo;
         }

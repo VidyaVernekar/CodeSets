@@ -8,8 +8,8 @@ namespace PatientDetails.Handlers
     public class UpdatePatientInfoHandler : IRequestHandler<UpdatePatientInfoCommand, PatientInfo>,
         IRequestHandler<IsExistsPatientInfoCommand, bool>
     {
-        private IPatientinfo _patientinfo;
-        public UpdatePatientInfoHandler(IPatientinfo patientinfo)
+        private IPatientinfoService _patientinfo;
+        public UpdatePatientInfoHandler(IPatientinfoService patientinfo)
         {
             _patientinfo = patientinfo;
         }
@@ -23,6 +23,11 @@ namespace PatientDetails.Handlers
         public async Task<bool> Handle(IsExistsPatientInfoCommand request, CancellationToken cancellationToken)
         {
             return await Task.FromResult(_patientinfo.PatientInfoExists(request.id));
+        }
+
+        public async Task<Login> Handle(IsExistsLoginCommand request, CancellationToken cancellationToken)
+        {
+            return await _patientinfo.LoginExists(request.username,request.password);
         }
     }
 }

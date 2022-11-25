@@ -10,8 +10,8 @@ namespace PatientDetails.Handlers
     public class GetPatientInfoListHandler : IRequestHandler<GetPatientInfoQueries, ActionResult<IEnumerable<PatientInfo>>>,
         IRequestHandler<GetPatientInfoQueriesByID, PatientInfo>
     {
-        private IPatientinfo _patientinfo;
-        public GetPatientInfoListHandler(IPatientinfo patientinfo)
+        private IPatientinfoService _patientinfo;
+        public GetPatientInfoListHandler(IPatientinfoService patientinfo)
         {
             _patientinfo = patientinfo;
         }

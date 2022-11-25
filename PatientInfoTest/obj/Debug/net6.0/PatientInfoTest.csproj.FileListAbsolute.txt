@@ -1,9 +1,4 @@
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.csproj.AssemblyReference.cache
-C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.AssemblyInfoInputs.cache
-C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.AssemblyInfo.cs
-C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.csproj.CoreCompileInputs.cache
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\testhost.dll
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\PatientDetails.deps.json
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\PatientDetails.runtimeconfig.json
@@ -351,6 +346,11 @@ C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\Microsoft.VisualStudio.
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\PatientDetails.dll
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\PatientDetails.pdb
 C:\Application\CodeSets\PatientInfoTest\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.csproj.AssemblyReference.cache
+C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.AssemblyInfoInputs.cache
+C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.AssemblyInfo.cs
+C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.csproj.CoreCompileInputs.cache
 C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.csproj.CopyComplete
 C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\PatientInfoTest.dll
 C:\Application\CodeSets\PatientInfoTest\obj\Debug\net6.0\refint\PatientInfoTest.dll

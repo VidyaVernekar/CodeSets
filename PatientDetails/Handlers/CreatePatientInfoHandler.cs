@@ -7,8 +7,8 @@ namespace PatientDetails.Handlers
 {
     public class CreatePatientInfoHandler : IRequestHandler<CreatePatientInfoCommand, PatientInfo>, IRequestHandler<CreatePatientInfoBySpreadSheetCommand, List<PatientDetailsODSheet>>
     {
-        private IPatientinfo _patientinfo;
-        public CreatePatientInfoHandler(IPatientinfo patientinfo)
+        private IPatientinfoService _patientinfo;
+        public CreatePatientInfoHandler(IPatientinfoService patientinfo)
         {
             _patientinfo = patientinfo;
         }

@@ -5,6 +5,9 @@ C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\PatientDeta
 C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\PatientDetails.runtimeconfig.json
 C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\PatientDetails.pdb
 C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
+C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\MediatR.dll
+C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\MediatR.Contracts.dll
+C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll
 C:\Application\CodeSets\PatientDetails\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll

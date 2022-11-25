@@ -28,8 +28,8 @@ namespace PatientDetails.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=PatientDetails;Trusted_Connection=True;");
-                //optionsBuilder.UseSqlServer("Server=tcp:patientserver.database.windows.net,1433;Initial Catalog=PatientDetails;Persist Security Info=False;User ID=vidya;Password=F#ea36y$7YH$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                 //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=PatientDetails;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=tcp:azureserviceforpatientdetials.database.windows.net,1433;Initial Catalog=patientservicedatabase;Persist Security Info=False;User ID=vidya;Password=F#ea36y$7YH$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
                 //Server=(localdb)\\mssqllocaldb; Database=PatientDetails;Trusted_Connection=True;
                 // "Server=tcp:patientserver.database.windows.net,1433;Initial Catalog=PatientDetails;Persist Security Info=False;User ID=vidya;Password=F#ea36y$7YH$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
             }

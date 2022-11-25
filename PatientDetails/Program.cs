@@ -16,7 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PatientDetailsContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("dbconn")));
-builder.Services.AddScoped<IPatientinfo,Patientinfo>();
+builder.Services.AddScoped<IPatientinfoService,PatientinfoService>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(option =>
     {

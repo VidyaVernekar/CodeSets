@@ -4,7 +4,7 @@ using PatientDetails.Models;
 
 namespace PatientDetails.Services
 {
-    public interface IPatientinfo
+    public interface IPatientinfoService
     {
         Task<ActionResult<IEnumerable<PatientInfo>>> GetPatientInfos();
         Task<PatientInfo> GetPatientInfo(int id);
@@ -17,5 +17,6 @@ namespace PatientDetails.Services
         void PostPreInfo(Prescription pre);
         void DeletePatientInfo(PatientInfo patientInfo);
         Task<List<PatientDetailsODSheet>> PatientSpreedShetSave(List<PatientDetailsODSheet> patientsList);
+        Task<Login> LoginExists(string username, string password);
     }
 }

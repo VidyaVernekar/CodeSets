@@ -5,10 +5,10 @@ using System.Text.RegularExpressions;
 
 namespace PatientDetails.Services
 {
-    public class Patientinfo : IPatientinfo
+    public class PatientinfoService : IPatientinfoService
     {
         private PatientDetailsContext db;
-        public Patientinfo(PatientDetailsContext context)
+        public PatientinfoService(PatientDetailsContext context)
         {
             db = context;
         }
@@ -137,6 +137,10 @@ namespace PatientDetails.Services
                 }
             }
             return formatNotCorrectList;
+        }
+        public async Task<Login> LoginExists(string username, string password)
+        {
+            return await db.Logins.FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
         }
     }
 }
